@@ -12,3 +12,24 @@ It is composed of 6 files about the article, its application to data and our con
  
 **Dependencies** : To run these files, it is necessary to have the libraries numpy, matplotlib, sklearn, scipy, tqdm, copy, time, pymc3. 
 
+**Some results** : 
+
+![My Image](image/plot.png)
+<p style="text-align: center;">Figure 1 : Decision boundaries obtained by SGLD and SGHD for different classification tasks</p>
+<br /><br />
+
+
+![My Image](image/SGLD.png)
+<p style="text-align: center;">Figure 2 : Trace plots of the parameters of θ obtained using SGLD for the linearly separable classes </p>
+<br /><br />
+
+
+![My Image](image/SGHD.png)
+<p style="text-align: center;">Figure 3 : Trace plots of the parameters of θ obtained using SGHD for the linearly separable classes </p>
+<br /><br />
+
+
+Thanks to our contribution, we can observe that SGHD improves the mixing behavior and decorrelates the chain moves.
+
+
+
