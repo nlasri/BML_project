@@ -111,7 +111,7 @@ def hamiltonian_dynamic(X_batch, y_batch, q, p, h_step, M_mass, n_steps, N, sigm
     return q_new, p_new
 
 
-def sghd_logreg(X, y, theta_0, h_step, n_steps, M_mass, sigma=1., gamma=.55, a=1, b=10, batch_size=1, n_iter=5000):    
+def sghd_logreg(X, y, theta_0, h_step, n_steps, M_mass, sigma=1., batch_size=1, n_iter=5000):    
     """Runs SGHD logistic regression for n_iter iterations on the provided training data (X, y).
 
     Parameters
@@ -130,12 +130,6 @@ def sghd_logreg(X, y, theta_0, h_step, n_steps, M_mass, sigma=1., gamma=.55, a=1
         amxx matrix
     sigma : float, optional
         std. dev. of the prior on theta, by default 1
-    gamma : float, optional
-        exponent of the step size, by default .55
-    a : int, optional
-        param1 of the step size, by default 1
-    b : int, optional
-        param2 of the step size, by default 10
     batch_size : int, optional
         size of the batch at each iteration, by default 1
     n_iter : int, optional
@@ -175,9 +169,6 @@ def sghd_logreg(X, y, theta_0, h_step, n_steps, M_mass, sigma=1., gamma=.55, a=1
         idx = np.random.choice(N, size=batch_size)
         X_batch = X[idx]
         y_batch = y[idx]
-        
-        # compute step size
-        step_size = a*(b+i)**(-gamma) if batch_size < N else h_step
         
         # initialise momentum
         p = np.random.multivariate_normal(mean=np.zeros(d), cov=M_mass)
