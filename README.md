@@ -5,7 +5,7 @@
 This github repository presents the source code of the work performed  the article ["Bayesian Learning via Stochastic Gradient Langevin Dynamics"](https://www.stats.ox.ac.uk/~teh/research/compstats/WelTeh2011a.pdf) (SGLD) by Max Welling and Yee Whye Teh.
 
 It comprises the following files:
- - `BML_project_Chaoui_Lasri.pdf` : PDF report explaining the contents of the paper, emphazing its strong and weak points, and showing the results of the application of SGLD to real data as well as a contribution in form of a variant sampling method based on HMC with batch gradient updates.
+ - `BML_project_report.pdf` : Project report explaining the contents of the paper, emphazing its strong and weak points, and showing the results of the application of SGLD to real data as well as a contribution in form of a variant sampling method based on HMC with batch gradient updates.
  - `sgld.py` : Presents the main functions used to implement SGLD. 
  - `sgld_toy.ipynb` : Application of SGLD to toy synthetic data. 
  - `sghd.py` : Presents the main functions used to implement our proposed sampling method: Stochastic Gradient Hamiltonian Dynamics (SGHD). 
